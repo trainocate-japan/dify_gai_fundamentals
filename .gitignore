@@ -1,0 +1,6 @@
+# Ignore instructor_material directory
+instructor_material/
+.venv/
+site/
+__pycache__/
+dify_gai_fudamentals.code-workspace

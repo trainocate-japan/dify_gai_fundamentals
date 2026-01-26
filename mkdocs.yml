@@ -1,0 +1,27 @@
+﻿site_name: Trainocate Dify AI Fundamentals
+
+theme:
+  name: material
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - content.code.copy
+    - navigation.instant
+    - navigation.sections
+
+nav:
+  - Home: index.md
+  - 1_chat_bot: 1_chat_bot/index.md
+  - 2_agent:
+      - agent_01_pre_research: 2_agent/agent_01_pre_research/index.md
+      - agent_02_svg_slide: 2_agent/agent_02_svg_slide/index.md
+      - agent_03_multi_document: 2_agent/agent_03_multi_document/index.md
+  - 3_work_flow: 3_work_flow/index.md
+  - 4_chat_flow: 4_chat_flow/index.md
+
+extra_javascript:
+  - assets/js/auth.js
+
+extra_css:
+  - assets/styles/custom.css
