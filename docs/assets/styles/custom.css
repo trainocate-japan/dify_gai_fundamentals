@@ -4,7 +4,7 @@
 }
 
 .md-typeset strong {
-  color: #f05630;
+  color: inherit; /* 強調表示の色を継承する */
 }
 
 .md-typeset .admonition,
@@ -26,3 +26,140 @@ body {
   font-family: "Inter", "Noto Sans JP", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, sans-serif;
 }
+
+/* =========================
+   Headings hierarchy
+========================= */
+
+/* h1 : Chapter */
+.md-typeset h1 {
+  color: #f05630;
+  font-weight: 700;
+}
+
+/* h2 : Section */
+.md-typeset h2 {
+  color: #1f6feb;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.2em;
+  margin-top: 2em;
+}
+
+/* h3 : Sub section / Step */
+.md-typeset h3 {
+  color: #1f6feb;
+  padding-left: 0.5em;
+  border-left: 4px solid #f05630;
+  margin-top: 1.5em;
+}
+
+/* h4 : Minor heading / Supplement */
+.md-typeset h4 {
+  font-size: 0.85rem;
+  font-weight: 650;
+  color: #1f6feb;
+
+  display: inline-block;
+  background-color: #eef4ff;
+  padding: 0.15em 0.5em;
+  border-radius: 999px;
+
+  margin-top: 1em;
+}
+
+/* h5: Highlight point */
+.md-typeset h5 {
+  font-size: 0.75rem;
+  color: #f05630;
+  font-weight: 600;
+  background-color: #f6f8fa;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 1em;
+}
+
+
+/* =========================
+   Link style 
+========================= */
+
+/* 通常リンク */
+.md-typeset a {
+  color: #1f6feb;              /* リンクっぽい青 */
+  text-decoration: underline;  /* 下線を常に表示 */
+  text-underline-offset: 0.15em;
+}
+
+/* ホバー時 */
+.md-typeset a:hover {
+  color: #f05630;              /* 会社カラーに寄せる（強調） */
+}
+
+/* =========================
+   Sidebar nav: smaller + section headers emphasized
+   (MkDocs Material)
+========================= */
+
+/* 左サイドバー全体の文字サイズを確実に下げる */
+.md-sidebar--primary {
+  font-size: 0.82rem;
+}
+
+/* メニューリンクの行間・余白を詰める */
+.md-sidebar--primary .md-nav__link {
+  line-height: 1.2;
+  padding-top: 0.12rem;
+  padding-bottom: 0.12rem;
+}
+
+/* リスト項目間の余白を最小化 */
+.md-sidebar--primary .md-nav__item {
+  margin: 0.04rem 0;
+}
+
+/* セクション（例: 1_チャットボット / 2_エージェント）を「帯」にする
+   Materialの構造差異に備え、titleと最上位linkの両方を対象にする */
+.md-sidebar--primary .md-nav__title,
+.md-sidebar--primary .md-nav__item--section > .md-nav__link {
+  display: block;
+  font-weight: 400;
+  font-size: 0.70rem;           /* セクションだけ少し大きく（差が出る） */
+  color: #24292f;
+
+  background: #f6f8fa;          /* 薄い帯 */
+  border-left: 4px solid #f05630;
+  padding: 0.22rem 0.55rem;
+  margin: 0.55rem 0 0.20rem;
+  border-radius: 6px;
+}
+
+/* セクション配下の項目は少しインデントして階層を見せる */
+.md-sidebar--primary .md-nav__item--nested .md-nav__link {
+  padding-left: 0.6rem;
+  font-size: 0.60rem;
+}
+
+/* アクティブ項目をより目立たせる（色＋下線） */
+.md-sidebar--primary .md-nav__link--active {
+  color: #f05630;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* =========================
+   コードブロックの折り返し設定
+========================= */
+
+/* 指定なし、markdown、text のコードブロックのみ折り返しを有効化 */
+pre code:not([class]), 
+pre code.language-markdown, 
+pre code.language-md, 
+pre code.language-text, 
+pre code.language-txt {
+  white-space: pre-wrap !important;
+  word-break: break-all !important; /* 長い英単語なども強制的に折り返す場合 */
+}
+
+

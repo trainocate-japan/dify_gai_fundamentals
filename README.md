@@ -1,21 +1,48 @@
-# dify_gai_fundamentals 
+﻿# dify_gai_fundamentals
 
-## 架空企業設定
+## 使い方
 
-### 企業名
-ミラセクト株式会社（Mirasekt Inc.）
+このリポジトリは MkDocs を使用して、`docs/` 配下の教材をビルド・配信します。
 
-### 企業概要
-ミラセクト株式会社は、従業員約5,000名規模の総合メーカー兼ソリューション企業である。自動車関連製品を主力に、オフィス機器、業務DX支援、ITソリューションなど多様な商品・サービスを展開している。営業、製造、開発、カスタマーサポート、人事、情報システムなど一般的な部門を備え、全社的な業務効率化とデジタル活用の高度化が重要な経営課題となっている。
+### ローカルプレビュー
+
+1. Python 3.x をインストールします。
+2. 依存関係をインストールします:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. ローカルサーバーを起動します:
+
+```bash
+mkdocs serve
+```
+
+表示されたローカルURL（通常は `http://127.0.0.1:8000`）をブラウザで開いてください。
+
+### 静的サイトのビルド
+
+```bash
+mkdocs build
+```
+
+生成されたファイルは `site/` に出力されます。
+
+### GitHub Pages（自動デプロイ）
+
+`main` ブランチへの push をトリガーに、GitHub Actions（`.github/workflows/deploy.yml`）が
+`mkdocs gh-deploy --force` を実行し、生成したサイトを `gh-pages` ブランチへ公開します。
+GitHub Pages を有効化し、ソースを `gh-pages` ブランチ（root）に設定すると、
+GitHub Pages でサイトが閲覧できます。
 
 ## License
 
-© 2026 Trainocate.inc
+(c) 2026 Trainocate, Inc.
 
-This repository is published for **educational and reference purposes only**.
+本リポジトリは**トレノケート株式会社の研修目的に限り**公開されています。
 
-- You may view and clone this repository for personal learning.
-- You may NOT reuse, modify, redistribute, or use this material for training,
-  commercial purposes, or derivative works without explicit permission.
+- 明示的な許可なく、再利用・改変・再配布、研修用途、商用利用、派生物の作成はできません。
 
 All rights reserved.
+

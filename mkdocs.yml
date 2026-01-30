@@ -12,16 +12,30 @@ theme:
 
 nav:
   - Home: index.md
-  - 1_chat_bot: 1_chat_bot/index.md
-  - 2_agent:
-      - agent_01_pre_research: 2_agent/agent_01_pre_research/index.md
-      - agent_02_svg_slide: 2_agent/agent_02_svg_slide/index.md
-      - agent_03_multi_document: 2_agent/agent_03_multi_document/index.md
-  - 3_work_flow: 3_work_flow/index.md
-  - 4_chat_flow: 4_chat_flow/index.md
+  - 1_チャットボット:
+      - 01_はじめてのチャットボット: 1_chat_bot/chatbot_01_basic_faq/index.md
+      - 02_社内規定案内: 1_chat_bot/chatbot_02_internal_policy/index.md
+      - 03_商品案内（車両csv）: 1_chat_bot/chatbot_03_product_guide/index.md
+      - 04_文書チェック: 1_chat_bot/chatbot_04_document_check/index.md
+  - 2_エージェント:
+      - 01_訪問前事前調査: 2_agent/agent_01_pre_research/index.md
+      - 02_SVGスライド作成: 2_agent/agent_02_svg_slide/index.md
+      - 03_マルチ文書作成: 2_agent/agent_03_multi_document/index.md
+  - 3_ワークフロー:
+      - 01_商談メモ→製品選定: 3_work_flow/workflow_01_product_selection/index.md
+      - 02_担当判断→社内問い合わせ: 3_work_flow/workflow_02_internal_inquiry/index.md
+      - 03_申請・一次審査: 3_work_flow/workflow_03_application_review/index.md
+      - 04_一括定型文書生成: 3_work_flow/workflow_04_batch_document_generation/index.md
+  - 4_チャットフロー:
+      - 01_担当判断→社内問い合わせ: 4_chat_flow/chatflow_01_internal_inquiry/index.md
 
 extra_javascript:
   - assets/js/auth.js
 
 extra_css:
   - assets/styles/custom.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences

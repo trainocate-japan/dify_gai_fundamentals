@@ -1,0 +1,16 @@
+car_id,brand,model,body_type,price_yen,fuel_type,drive_type,seats,notes
+A001,Mirasekt,Orion,セダン,3100000,ハイブリッド,2WD,5,EV専用モデルではありません
+A002,Mirasekt,Vega,ミニバン,5200000,ガソリン/ハイブリッド,2WD/4WD,7,法人向け仕様あり
+A003,Mirasekt,Luna,ハッチバック,4300000,EV,2WD,5,家庭用充電設備が必要
+A004,Mirasekt,Solace,コンパクト,2200000,ガソリン,2WD,5,スポーツ仕様はありません
+A005,Mirasekt,Nova,SUV,4800000,ハイブリッド,4WD,5,オフロード走行は想定していません
+A006,Mirasekt,Helios,セダン,3600000,ガソリン,2WD,5,寒冷地仕様は非対応
+A007,Mirasekt,Atlas,SUV,6100000,ガソリン,4WD,7,大型車のため都市部では取り回しに注意
+A008,Mirasekt,Comet,コンパクト,2400000,ガソリン/ハイブリッド,2WD,5,マニュアル車の設定はありません
+A009,Mirasekt,Pulsar,クーペ,3900000,ガソリン,2WD,4,後部座席は補助的な設計です
+A010,Mirasekt,Eclipse,セダン,4500000,EV,2WD,5,急速充電には対応していません
+A011,Mirasekt,Aurora,ミニバン,5800000,ハイブリッド,4WD,8,個人向け販売は数量限定
+A012,Mirasekt,Zenith,SUV,5300000,EV,4WD,5,冬季は航続距離が短くなる場合があります
+A013,Mirasekt,Meteor,コンパクト,2100000,ガソリン,2WD,4,法人向け専用モデルです
+A014,Mirasekt,Stratos,セダン,6700000,ハイブリッド,4WD,5,高級仕様のため納期が長くなる場合があります
+A015,Mirasekt,Orbit,ワゴン,3400000,ガソリン,2WD,5,現在は国内販売のみ対応
