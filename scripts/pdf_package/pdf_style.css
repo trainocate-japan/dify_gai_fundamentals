@@ -1,0 +1,106 @@
+body {
+  font-family: "Noto Sans JP", "Yu Gothic UI", "Segoe UI", sans-serif;
+  font-size: 11pt;
+  line-height: 1.55;
+  max-width: 920px;
+}
+
+header#title-block-header {
+  display: none;
+}
+
+h1 {
+  color: #f05630;
+  font-size: 24pt;
+  margin-top: 0;
+}
+
+h2 {
+  color: #1f6feb;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
+  margin-top: 1.8em;
+}
+
+h3 {
+  color: #1f6feb;
+  border-left: 4px solid #f05630;
+  padding-left: 8px;
+  margin-top: 1.4em;
+}
+
+a {
+  color: #1f6feb;
+  text-decoration: underline;
+}
+
+pre, code, kbd, samp {
+  font-family: "JetBrains Mono", "Consolas", monospace;
+}
+
+pre {
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 10px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+code {
+  background: #f6f8fa;
+  border-radius: 4px;
+  padding: 0.1em 0.28em;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.admonition {
+  border-left: 4px solid #f05630;
+  background: #fff7f5;
+  padding: 10px 12px;
+  margin: 14px 0;
+  border-radius: 6px;
+}
+
+.admonition.note,
+.admonition.info,
+.admonition.tip {
+  border-left-color: #1f6feb;
+  background: #f2f7ff;
+}
+
+.admonition.warning {
+  border-left-color: #d29922;
+  background: #fff9e8;
+}
+
+.admonition.danger {
+  border-left-color: #cf222e;
+  background: #fff1f2;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 10pt;
+}
+
+th, td {
+  border: 1px solid #d0d7de;
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+th {
+  background: #f6f8fa;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+

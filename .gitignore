@@ -4,3 +4,4 @@ instructor_material/
 site/
 __pycache__/
 dify_gai_fundamentals.code-workspace
+local_artifacts/

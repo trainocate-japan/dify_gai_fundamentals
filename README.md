@@ -29,6 +29,51 @@ mkdocs build
 
 生成されたファイルは `site/` に出力されます。
 
+### PDF配布物のローカル生成（push前チェック用）
+
+受講者向け配布のために、`docs/assets` を除く `docs/**/*.md` を PDF 化し、
+`downloads.zip` を同梱したバンドルをローカルで作成できます。
+
+事前に以下が必要です。
+
+- `pandoc`
+- Chrome/Edge（headless PDF出力に使用）
+
+```bash
+python scripts/pdf_package/build_pdf_bundle.py
+```
+
+生成先は `local_artifacts/pdf_bundle/` です。
+漏れ確認用に `manifest.json` と `SUMMARY.txt` も作成されます。
+
+完全再生成（出力先を一度クリーンにする）:
+
+```bash
+python scripts/pdf_package/build_pdf_bundle.py --clean
+```
+
+#### push前に自動実行したい場合
+
+```bash
+git config core.hooksPath .githooks
+```
+
+これで `git push` 時に `pre-push` フックが走り、ローカルでPDFバンドル生成を実行します。
+ただし、最適化のため **push対象に `docs/` の変更がある場合のみ** 実行されます（`docs/assets/` は除外）。
+生成に失敗した場合は push を中断します。
+
+一時的にスキップする場合:
+
+```bash
+SKIP_PDF_BUNDLE=1 git push
+```
+
+PowerShell の場合:
+
+```powershell
+$env:SKIP_PDF_BUNDLE="1"; git push
+```
+
 ### GitHub Pages（自動デプロイ）
 
 `main` ブランチへの push をトリガーに、GitHub Actions（`.github/workflows/deploy.yml`）が
@@ -45,4 +90,3 @@ GitHub Pages でサイトが閲覧できます。
 - 明示的な許可なく、再利用・改変・再配布、研修用途、商用利用、派生物の作成はできません。
 
 All rights reserved.
-
