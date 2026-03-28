@@ -81,6 +81,21 @@ $env:SKIP_PDF_BUNDLE="1"; git push
 GitHub Pages を有効化し、ソースを `gh-pages` ブランチ（root）に設定すると、
 GitHub Pages でサイトが閲覧できます。
 
+### Azure Static Web Apps（バックアップ配信）
+
+企業ネットワーク制限などで GitHub Pages にアクセスできない場合に備え、Azure Static Web Apps へも同じコンテンツを配信します。
+
+- ワークフロー: `.github/workflows/azure-static-web-apps-icy-sea-0bdb7af00.yml`
+- トリガー: `main` ブランチへの `push`
+- デプロイ方式: `mkdocs build` で `site/` を生成後、SWA にアップロード
+
+これにより、`main` への push で以下 2 系統が同時に更新されます。
+
+- GitHub Pages: `https://trainocate-japan.github.io/dify_gai_fundamentals/`
+- Azure Static Web Apps: `https://icy-sea-0bdb7af00.1.azurestaticapps.net`
+
+研修当日は、GitHub Pages を主系、Azure Static Web Apps を予備系として案内してください。
+
 ## License
 
 (c) 2026 Trainocate, Inc.
