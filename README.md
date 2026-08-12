@@ -74,6 +74,50 @@ PowerShell の場合:
 $env:SKIP_PDF_BUNDLE="1"; git push
 ```
 
+### downloads配布ファイルの更新
+
+受講者向けに配布するファイルは、元ファイルをルートの `downloads/` で管理し、
+WebサイトからダウンロードされるZIPを `docs/downloads/downloads.zip` に配置します。
+`docs/downloads/downloads.zip` は自動生成されないため、ファイルを追加・入れ替えた場合は、
+元ファイルとZIPの両方を更新してください。
+
+#### 更新手順
+
+1. 配布するファイルやフォルダを、ルートの `downloads/` 配下に追加・更新します。
+   例: `downloads/ワークショップ_01/`
+2. リポジトリのルートで、`downloads/` フォルダを含む形でZIPを再生成します。
+
+```powershell
+Compress-Archive `
+  -Path .\downloads `
+  -DestinationPath .\docs\downloads\downloads.zip `
+  -Force
+```
+
+3. ZIPの内容に追加・更新したファイルが含まれていることを確認します。
+
+```powershell
+tar -tf .\docs\downloads\downloads.zip
+```
+
+4. サイトと配布用PDFバンドルを確認します。
+
+```powershell
+python -m mkdocs build --strict
+python scripts/pdf_package/build_pdf_bundle.py --clean
+```
+
+5. 元ファイルとZIPの両方をコミット対象にします。
+
+```powershell
+git add downloads/ docs/downloads/downloads.zip
+git status
+```
+
+`downloads/` だけを更新してZIPを再生成しない場合、Webサイトのダウンロードファイルには変更が反映されません。
+反対にZIPだけを更新すると、リポジトリ内の元ファイルと配布物に差異が生じます。
+ZIP内にはAPIキー、パスワード、個人情報、講師専用資料などの機密情報を含めないでください。
+
 ### GitHub Pages（自動デプロイ）
 
 `main` ブランチへの push をトリガーに、GitHub Actions（`.github/workflows/deploy.yml`）が
