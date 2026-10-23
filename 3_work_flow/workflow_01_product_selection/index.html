@@ -1,0 +1,1926 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../2_agent/agent_03_multi_document/">
+      
+      
+        <link rel="next" href="../workflow_02_internal_inquiry/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>01_商談メモ→製品選定 - Trainocate Dify AI Fundamentals</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/styles/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1_" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Trainocate Dify AI Fundamentals" class="md-header__button md-logo" aria-label="Trainocate Dify AI Fundamentals" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Trainocate Dify AI Fundamentals
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              01_商談メモ→製品選定
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Trainocate Dify AI Fundamentals" class="md-nav__button md-logo" aria-label="Trainocate Dify AI Fundamentals" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Trainocate Dify AI Fundamentals
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1_チャットボット
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1_チャットボット
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1_chat_bot/chatbot_01_basic_faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01_はじめてのチャットボット
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1_chat_bot/chatbot_02_internal_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02_社内規定案内
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1_chat_bot/chatbot_03_product_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03_商品案内（車両csv）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1_chat_bot/chatbot_04_document_check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04_文書チェック
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2_エージェント
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2_エージェント
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_agent/agent_01_pre_research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01_訪問前事前調査
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_agent/agent_02_svg_slide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02_SVGスライド作成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_agent/agent_03_multi_document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03_マルチ文書作成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3_ワークフロー
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3_ワークフロー
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01_商談メモ→製品選定
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01_商談メモ→製品選定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 説明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 使用するノード
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Dify設定手順
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Dify設定手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手順①：ナレッジの構築
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手順②：ワークフローアプリの作成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手順③：ワークフローの設定
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="手順③：ワークフローの設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ユーザー入力ノード
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-llm1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. LLM①ノード（商談内容の整理）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 知識検索ノード
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-llm2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. LLM②ノード（製品候補の選定）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 終了ノード
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手順④：保存する
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 動作確認
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 動作確認">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        商談メモ①：事務部門の効率化とコスト削減（初級）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="商談メモ①：事務部門の効率化とコスト削減（初級）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入力
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模範出力（ポイント解説）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模範出力（ポイント解説）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM①（商談内容の整理）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM②（製品候補の選定）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        商談メモ②：組織の活性化と目に見えない疲弊（中級・ノイズあり）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="商談メモ②：組織の活性化と目に見えない疲弊（中級・ノイズあり）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入力
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模範出力（ポイント解説）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模範出力（ポイント解説）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM①（商談内容の整理）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM②（製品候補の選定）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        商談メモ③：働き方の変化とセキュリティへの漠然とした不安（中級・判断材料混在）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="商談メモ③：働き方の変化とセキュリティへの漠然とした不安（中級・判断材料混在）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入力
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模範出力（ポイント解説）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模範出力（ポイント解説）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM①（商談内容の整理）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM②（製品候補の選定）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow_02_internal_inquiry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02_担当判断→社内問い合わせ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow_03_application_review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    03_申請・一次審査
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflow_04_batch_document_generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04_一括定型文書生成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4_チャットフロー
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4_チャットフロー
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4_chat_flow/chatflow_01_internal_inquiry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01_担当判断→社内問い合わせ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 説明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 使用するノード
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Dify設定手順
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Dify設定手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手順①：ナレッジの構築
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手順②：ワークフローアプリの作成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手順③：ワークフローの設定
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="手順③：ワークフローの設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ユーザー入力ノード
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-llm1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. LLM①ノード（商談内容の整理）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 知識検索ノード
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-llm2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. LLM②ノード（製品候補の選定）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 終了ノード
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手順④：保存する
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 動作確認
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 動作確認">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        商談メモ①：事務部門の効率化とコスト削減（初級）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="商談メモ①：事務部門の効率化とコスト削減（初級）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入力
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模範出力（ポイント解説）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模範出力（ポイント解説）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM①（商談内容の整理）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM②（製品候補の選定）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        商談メモ②：組織の活性化と目に見えない疲弊（中級・ノイズあり）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="商談メモ②：組織の活性化と目に見えない疲弊（中級・ノイズあり）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入力
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模範出力（ポイント解説）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模範出力（ポイント解説）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM①（商談内容の整理）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM②（製品候補の選定）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        商談メモ③：働き方の変化とセキュリティへの漠然とした不安（中級・判断材料混在）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="商談メモ③：働き方の変化とセキュリティへの漠然とした不安（中級・判断材料混在）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入力
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模範出力（ポイント解説）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模範出力（ポイント解説）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM①（商談内容の整理）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM②（製品候補の選定）の要点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1_">1_商談メモからの製品選定ワークフロー</h1>
+<p>このドキュメントは、Dify でワークフローを作成するための演習手順書です。</p>
+<h2 id="1">1. 説明</h2>
+<p>顧客との商談メモを入力すると、AIが内容を構造的に整理し、自社商品の中から最適な提案候補を自動で選定するワークフローです。
+「情報の整理」と「戦略的な製品選定」のステップを分けることで、単なる要約に留まらない、営業現場で即戦力となる提案支援アウトプットを作成します。</p>
+<details class="tip">
+<summary>Tips：モデルによる設定の違い</summary>
+<p>GPTモデルとGeminiモデルでは設定内容に違いがあります。
+特にワークフローやチャットフローのLLMノードでは、GPTモデルはSYSTEMプロンプトのみ必須ですが、GeminiモデルではUSERプロンプトが必須です。この演習手順ではGeminiモデルをデフォルトにしているため、USERプロンプトを設定する手順となっています。</p>
+</details>
+<h2 id="2">2. 使用するノード</h2>
+<ol>
+<li><strong>LLMノード①（整理担当）</strong>: メモから課題や制約を抽出。</li>
+<li><strong>知識検索ノード</strong>: 整理された課題に基づき、関連する製品情報をナレッジから取得。</li>
+<li><strong>LLMノード②（選定担当）</strong>: 取得した製品群から、なぜその製品が最適か、あるいはなぜ不採用かを論理的に判断。</li>
+</ol>
+<hr />
+<h2 id="3-dify">3. Dify設定手順</h2>
+<h3 id="1_1">手順①：ナレッジの構築</h3>
+<div class="admonition success">
+<p class="admonition-title">演習環境では事前に登録済みなのでこの作業は不要です。</p>
+</div>
+<ol>
+<li>Dify上部メニューの「<strong>ナレッジ</strong>」をクリック ⇒ 「<strong>ナレッジベースを作成</strong>」をクリック 。</li>
+<li>「<strong>ファイルまたはフォルダをドラッグアンドドロップ</strong>」の部分に「<strong>product_list_solution.csv</strong>」をアップロードして「<strong>次へ</strong>」 。</li>
+<li><strong>チャンク設定</strong>：デフォルトのまま「<strong>チャンクをプレビュー</strong>」をクリック。画面右に表示されるプレビューで、商品情報が並ぶのを確認する。</li>
+<li><strong>インデックス方法</strong>：デフォルトのまま「<strong>高品質</strong>」を選択。</li>
+<li><strong>埋め込みモデル</strong>: デフォルトのまま「<strong>text-embedding-3-small</strong>」を選択。</li>
+<li><strong>検索設定</strong>: 「<strong>ハイブリッド検索</strong>」を選択。詳細の設定はデフォルトのまま。</li>
+<li><strong>保存して処理</strong>をクリック。</li>
+<li><strong>埋め込みが完了しました</strong>と表示されたら先に進みます。</li>
+</ol>
+<h3 id="2_1">手順②：ワークフローアプリの作成</h3>
+<ol>
+<li>上部メニューから「<strong>スタジオ</strong>」を選択。</li>
+<li>「<strong>最初から作成</strong>」→「<strong>ワークフロー</strong>」を選択。  </li>
+<li><strong>アプリ名</strong>：ワークフロー：商談メモから製品選定ワークフロー</li>
+<li><strong>説明</strong>：商談メモをもとに自社製品のなかからどの製品を提案すべきか製品の選定およびその理由を説明します。</li>
+<li>「<strong>作成する</strong>」をクリック 。</li>
+</ol>
+<h3 id="3">手順③：ワークフローの設定</h3>
+<p><strong>開始ノード</strong>として「<strong>ユーザー入力</strong>」を選択してワークフローの構築を開始します。<br />
+ワークフローのキャンバス上には、<strong>ユーザー入力ノード</strong>だけが配置されている状況です。
+以下の作業を行い、ノードを順に配置・設定していきます。</p>
+<h4 id="1_2">1. ユーザー入力ノード</h4>
+<ol>
+<li>ワークフローの編集画面で<strong>ユーザー入力ノード</strong>を選択します。<br />
+以下の操作は、画面の右に出る設定画面で行います。</li>
+<li>「<strong>入力フィールド</strong>」の「<strong>+</strong>」をクリックして、入力フィールドを設定します。<ol>
+<li><strong>タイプ</strong>：段落</li>
+<li><strong>変数名</strong>：<code>input</code></li>
+<li><strong>ラベル名</strong>：商談メモ入力</li>
+<li><strong>最大長</strong>：3000</li>
+<li><strong>デフォルト値</strong>：
+  <div class="highlight"><pre><span></span><code>商談メモをそのまま入力してください。
+箇条書きで構いません。
+</code></pre></div></li>
+<li><strong>必須</strong>をチェック</li>
+<li><strong>保存</strong>をクリック</li>
+</ol>
+</li>
+</ol>
+<h4 id="2-llm1">2. LLM①ノード（商談内容の整理）</h4>
+<ol>
+<li>ユーザー入力ノードの右にある「<strong>+</strong>」をクリックして、表示される一覧から「<strong>LLM</strong>」を選んでLノードを追加します。
+以下の操作は、画面の右に出る設定画面で行います。</li>
+<li>設定画面の上部の「<strong>LLM</strong>」と記載されている部分がノード名です。役割がわかりやすいようにノード名を「<strong>LLM①商談内容の整理</strong>」に変更します。</li>
+<li><strong>モデル</strong>：<code>gemini-3.1-flash-lite</code></li>
+<li><strong>Thinking level</strong>：<code>Medium</code> を選択します。</li>
+<li>
+<p><strong>システムプロンプト（SYSTEM）</strong>：
+        <div class="highlight"><pre><span></span><code><span class="gh"># 役割</span>
+あなたは経験豊富な営業アシスタントです。
+以下の商談メモを読み、内容を「判断に使える形」に整理してください。
+
+<span class="gh"># 重要ルール</span>
+・提案内容や製品名は一切書かない
+・推測や補完はしない
+・文章は簡潔に、箇条書きで出力する
+・商談メモに書かれていない事実は追加しない
+
+<span class="gh"># 出力項目</span>
+・顧客の主な課題
+・制約条件（人・予算・期限・体制など）
+・顧客が重視しているポイント
+・現時点で不明な点／確認が必要な点
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>ユーザープロンプト（USER）</strong>：
+<strong>+メッセージ追加</strong>をクリックします。すると、USERの入力が表示されます。USERに以下を入力します。
+        <div class="highlight"><pre><span></span><code><span class="gh"># 商談メモ</span>
+{{input}}
+</code></pre></div></p>
+</li>
+</ol>
+<details class="info" open="open">
+<summary>↑{{変数}}の設定部分は手入力の必要があります</summary>
+<p>上記の<strong>{{input}}</strong>の部分は、ユーザー入力ノードで作成した変数を指定するものです。
+コピーペーストするだけでは認識されないので、{{input}}の部分は手入力で「<strong>{</strong>」または「<strong>/</strong>」を入力して表示される変数候補の中からinputを選んでください。
+この方法は、以下のノード設定でも共通です。</p>
+</details>
+<p>完成したユーザー入力欄は以下のようになります。
+<img alt="alt text" src="image.png" /></p>
+<h4 id="3_1">3. 知識検索ノード</h4>
+<ol>
+<li>作成したLLMノードの右にある「<strong>+</strong>」をクリックして、表示される一覧から「<strong>知識検索</strong>」を選んでノードを追加します。
+以下の操作は、画面の右に出る設定画面で行います。</li>
+<li>設定画面上部のノード名を「<strong>知識検索_製品ラインナップ</strong>」に変更します。</li>
+<li><strong>クエリテキスト</strong>：クリックして<code>#LLM①商談内容の整理の text</code>（LLM1の出力）を選択。</li>
+<li><strong>ナレッジベース</strong>：手順①で作成した「<strong>product_list_solution</strong>」を選択して<strong>追加</strong>をクリック。</li>
+</ol>
+<h4 id="4-llm2">4. LLM②ノード（製品候補の選定）</h4>
+<ol>
+<li>作成した知識検索ノードの右にある「<strong>+</strong>」をクリックして、表示される一覧から「<strong>LLM</strong>」を選んでノードを追加します。
+以下の操作は、画面の右に出る設定画面で行います。</li>
+<li>設定画面上部のノード名を「<strong>LLM②製品候補の選定</strong>」に変更します。</li>
+<li><strong>モデル</strong>：<code>gemini-3.1-flash-lite</code></li>
+<li><strong>Thinking level</strong>：<code>Medium</code> を選択します。</li>
+<li><strong>コンテキスト</strong>：クリックして<code>{{#知識検索_製品ラインナップ result</code>（知識検索の出力）を選択。</li>
+<li>
+<p><strong>システムプロンプト（SYSTEM）</strong>：
+        <div class="highlight"><pre><span></span><code><span class="gh"># 役割</span>
+あなたは経験豊富な営業担当です。
+以下の情報をもとに、「売るべき製品候補」を検討してください。
+
+<span class="gh"># 判断ルール</span>
+・1つに決めなくてよい（複数候補可）
+・「なぜ候補になるか」を必ず書く
+・「なぜ選ばなかったか」も必ず書く
+・ナレッジに書かれていない製品は出さない
+・断定しすぎず、営業として妥当な表現にする
+
+<span class="gh"># 出力形式</span>
+■ 候補となる製品
+■ 今回選ばなかった製品
+■ 注意点・リスク
+■ 追加で確認すべき質問
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>ユーザープロンプト（USER）</strong>：
+<strong>+メッセージ追加</strong>をクリックします。すると、USERの入力が表示されます。USERに以下を入力します。
+        <div class="highlight"><pre><span></span><code><span class="gh"># 入力情報</span>
+・商談内容の整理結果：
+{{#LLM①.text#}}
+
+・製品ラインナップのナレッジ：
+{{#context#}}
+</code></pre></div></p>
+</li>
+</ol>
+<details class="info">
+<summary>↑{{変数}}の設定部分は手入力の必要があります</summary>
+<p>上記の<strong>{{変数名}}</strong>の部分は、これ以前のノードで設定した変数を指定するものです。
+コピーペーストするだけでは認識されないので、手入力で「<strong>{</strong>」または「<strong>/</strong>」を入力して表示される変数候補の中から選んでください。</p>
+</details>
+<h4 id="5">5. 終了ノード</h4>
+<ol>
+<li>作成したLLMノードの右にある「<strong>+</strong>」をクリックして、表示される一覧から「<strong>出力</strong>」を選んでノードを追加します。
+以下の操作は、画面の右に出る設定画面で行います。</li>
+<li>出力変数の右の「<strong>+</strong>」をクリックして、以下二つの出力変数を設定します。ワークフローを実行した際に、ここに設定した出力変数が順に出力されます。<ol>
+<li><strong>LLM1_result</strong>：<code>LLM①商談内容の整理 text</code></li>
+<li><strong>LLM2_result</strong>：<code>LLM②製品候補の選定 text</code></li>
+</ol>
+</li>
+</ol>
+<h3 id="4">手順④：保存する</h3>
+<p>画面右上の「<strong>公開する</strong>」→「<strong>更新を公開</strong>」をクリックします。変更が保存されます。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Dify では、上記の保存作業を行うと、保存とともに公開設定がされ、<br />
+環境によっては <strong>Dify にログインしていないユーザーでもアプリにアクセス可能</strong> になります。</p>
+<p>限定したい場合は、左上のアプリ名をクリックし、<strong>Web App とバックエンドサービス APIをオフ</strong>にしてください。<br />
+※ 公開可否や利用範囲については、事前に管理者へ確認してください。</p>
+</div>
+<hr />
+<h2 id="4_1">4. 動作確認</h2>
+<p>画面右上のテスト実行をクリックし、作成したワークフローのプレビュー画面を開き、以下の3つの商談メモを入力して、意図した通りの分析・提案が行われるか確認してください。</p>
+<hr />
+<h3 id="1_3">商談メモ①：事務部門の効率化とコスト削減（初級）</h3>
+<h4 id="_1">入力</h4>
+<div class="highlight"><pre><span></span><code>【商談日】2024/11/12  
+【訪問先】A社 総務部  
+【参加者】A社：総務担当2名／当社：私
+
+・冒頭で雑談。最近紙の値段が上がっていて、コピー用紙の発注も大変との話。
+・総務の方から「申請書が多くて処理が追いつかない」という話が出た。
+・現在は稟議、出張申請、備品申請などほぼすべて紙で回している。
+・承認者が不在だと書類が止まることが多いらしい。
+・IT担当は情シス兼任の方が1名いるだけ。「難しいシステムは正直困る」との発言あり。
+・年度末までに何か改善できるとありがたい。予算は多少なら検討できる。
+</code></pre></div>
+<h4 id="_2">模範出力（ポイント解説）</h4>
+<p>※ 主に以下のような点が出力されますが、完全に一致するわけではありません。</p>
+<h5 id="llm1"><strong>LLM①（商談内容の整理）の要点</strong></h5>
+<ul>
+<li><strong>主な課題</strong>：紙ベースの申請業務による停滞と、用紙代の高騰に伴うコスト負担</li>
+<li><strong>制約条件</strong>：IT担当者が1名のみ。複雑なシステム導入は困難</li>
+<li><strong>重視ポイント</strong>：年度末までの短期間での改善効果</li>
+</ul>
+<h5 id="llm2"><strong>LLM②（製品候補の選定）の要点</strong></h5>
+<ul>
+<li><strong>推奨品2：スマート経費精算</strong>。AI自動読取で事務作業を効率化し、IT担当が少なくても運用しやすい</li>
+<li><strong>推奨品3：ペーパーレスSCAN</strong>。大量の紙書類を1日で電子化し、年度末までの迅速な環境改善を実現する</li>
+</ul>
+<hr />
+<h3 id="2_2">商談メモ②：組織の活性化と目に見えない疲弊（中級・ノイズあり）</h3>
+<h4 id="_3">入力</h4>
+<div class="highlight"><pre><span></span><code>【商談日】2024/11/18  
+【訪問先】B社 人事総務課  
+【参加者】B社：課長1名／当社：私
+
+・「最近近所のランチ代が高くなって、お弁当派が増えた」という雑談。
+・課長曰く、最近の中途採用者は「会社の雰囲気が静かすぎて、誰が何を考えているか不安」と言って数ヶ月で辞めてしまう例がある。
+・「オフィスが寒暖差で集中しづらい」「椅子がガタついている」といった細かい苦情がアンケートで出ているが、優先順位がつけられない。
+・社員の表情が以前より暗い気がするが、管理職も自分の業務で手一杯でケアしきれていない。
+・健康経営の表彰（ホワイト500など）には興味があるが、何から手をつけるべきか白紙。
+</code></pre></div>
+<h4 id="_4">模範出力（ポイント解説）</h4>
+<p>※ 主に以下のような点が出力されますが、完全に一致するわけではありません。</p>
+<h5 id="llm1_1"><strong>LLM①（商談内容の整理）の要点</strong></h5>
+<ul>
+<li><strong>主な課題</strong>：離職率の改善（リテンション）、従業員のメンタル・健康状態の把握、福利厚生の不備</li>
+<li><strong>制約条件</strong>：管理職のリソース不足、対策の優先順位付けが困難</li>
+<li><strong>重視ポイント</strong>：従業員満足度の向上、健康経営に向けた第一歩</li>
+</ul>
+<h5 id="llm2_1"><strong>LLM②（製品候補の選定）の要点</strong></h5>
+<ul>
+<li><strong>推奨品1：どこでも管理職</strong>。離職の予兆をAIで検知し、多忙な管理職に代わって「誰が何を考えているか不安」という課題を可視化する</li>
+<li><strong>推奨品2：健食デリ</strong>。ランチ事情の悪化に対し、社内で健康的な食事が摂れる福利厚生として満足度を即座に高められる</li>
+</ul>
+<hr />
+<h3 id="3_2">商談メモ③：働き方の変化とセキュリティへの漠然とした不安（中級・判断材料混在）</h3>
+<h4 id="_5">入力</h4>
+<div class="highlight"><pre><span></span><code>【商談日】2024/12/3  
+【訪問先】C社 製造業バックオフィス  
+【参加者】C社：工場長、事務担当1名／当社：私
+
+・「最近、鉄道高架の工事で外が騒がしくてかなわない」という真偽不明のボヤキからスタート。
+・最近は取引先とのWeb会議が増えたが、自席で話すと工場の音や周囲の電話の声が入ってしまい、「相手から聞き取りづらい」と苦情が来た。
+・会議室は常に予約で埋まっており、かといって廊下で商談するわけにもいかず、場所の確保に四苦八苦している。
+・先週、全社宛に届いた不審なメールを危うく開封しそうになった社員がいて、一時パニックになった。専任のIT担当がいないので、「ウイルスが入ったら終わりだ」と工場長が漏らしていた。
+・本当はDXでスマートにやりたいが、今は目先のトラブル対応で精一杯。災害用の水すらどこにあるか怪しいとのこと。
+</code></pre></div>
+<h4 id="_6">模範出力（ポイント解説）</h4>
+<p>※ 主に以下のような点が出力されますが、完全に一致するわけではありません。</p>
+<h5 id="llm1_2"><strong>LLM①（商談内容の整理）の要点</strong></h5>
+<ul>
+<li><strong>主な課題</strong>：Web会議時の騒音・プライバシー問題と場所不足、専門家不在によるサイバー攻撃への強い不安 </li>
+<li><strong>制約条件</strong>：IT専任担当者の不在、物理的な会議スペースの不足 </li>
+<li><strong>重視ポイント</strong>：業務を止めない安全確保と、Web会議環境の改善 </li>
+</ul>
+<h5 id="llm2_2"><strong>LLM②（製品候補の選定）の要点</strong></h5>
+<ul>
+<li><strong>推奨品1：サイバーガードAI</strong>。IT担当不在でもAIが24時間監視し、不審なメール等の脅威から自動で防御できるため </li>
+<li><strong>推奨品2：集中オフィスブース</strong>。騒音や会議室不足に対し、工事不要でWeb会議に最適な防音空間を確保できるため </li>
+<li><strong>推奨品3：天然水サーバー（または災害対策セット）</strong>。工場長が気にしていた災害対策（BCP）と、備蓄管理の悩みを解決できるため</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/js/auth.js"></script>
+      
+    
+  </body>
+</html>
